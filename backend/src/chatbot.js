@@ -82,8 +82,6 @@ class Chatbot {
       this.response =
         messages.data[messages.data.length - 1].content[0].text.value;
     } else if (run.status === "requires_action") {
-      console.log(run.required_action.submit_tool_outputs.tool_calls);
-      setTimeout(() => {}, 2000);
       return await this.handleRequiresAction(run);
     } else {
       console.error("Run did not complete:", run);
