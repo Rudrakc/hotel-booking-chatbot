@@ -8,8 +8,6 @@ This is a hotel booking chatbot application built with a backend and a frontend 
 - [Usage](#usage)
 - [API Key Setup](#api-key-setup)
 - [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Installation
 
