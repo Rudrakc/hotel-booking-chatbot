@@ -18,12 +18,24 @@ This is a hotel booking chatbot application built with a backend and a frontend 
     ```
 
 2. **Backend Setup**
-    ```sh
-    cd backend
-    python3 -m venv venv
-    source venv/bin/activate   # On Windows use `venv\Scripts\activate`
-    pip install -r requirements.txt
-    ```
+    Features
+
+    - Handles hotel booking queries using OpenAI's API.
+    - Provides endpoints for chat interactions.
+    - Stores conversation history in an SQLite database.
+    - Supports CORS.
+
+     Prerequisites
+
+    - Node.js (version 14.x or later)
+    - npm (version 6.x or later)
+    - SQLite3
+
+
+    Install the dependencies:
+        ```sh
+        npm install
+        ```
 
 3. **Frontend Setup**
     ```sh
@@ -35,10 +47,8 @@ This is a hotel booking chatbot application built with a backend and a frontend 
 
 ### Backend Configuration
 
-1. **Create a `.env` file in the `backend` directory and add the following:**
-    ```env
-    FLASK_APP=app.py
-    FLASK_ENV=development
+1. Create a `.env` file in the root directory and add your OpenAI API key:
+    ```
     OPENAI_API_KEY=your_openai_api_key
     ```
 
@@ -51,11 +61,12 @@ This is a hotel booking chatbot application built with a backend and a frontend 
 
 ### Running the Backend Server
 
-1. **Start the backend server**
+1. **Start the server**:
     ```sh
-    cd backend
-    flask run
+    npm start
     ```
+
+2. The server will run on `http://localhost:3000` by default.
 
 ### Running the Frontend Server
 
@@ -85,6 +96,7 @@ curl -X POST http://localhost:5000/chat \
      -H "Content-Type: application/json" \
      -d '{
            "message": "I want to book a hotel room for tomorrow"
+            "userId": "user123"
          }'
 ```
 
